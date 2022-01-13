@@ -1,30 +1,37 @@
-import { Component } from "react";
+
 import "./PersoneCard.css";
 
-class PersoneCard extends Component {
-    constructor(props){
-        super(props);
-
-        this.state ={
-            age: this.props.age
-        };
-    }
-    changeAge =() =>{
-        this.setState({age:this.state.age +1});
-    };
-
-render(){
+const PersoneCard = props => {
     return(
-         <div class="countenar">
-                <div class="thediv">
-                   <h1>{this.props.lastName}, {this.props.firstName}</h1>
-                    <p>Age: {this.state.age}</p>
-                    <p>Hair Color: {this.props.hairColor}</p>
-                    <button class="button" onClick={this.changeAge}> Birthday Button For {this.props.firstName}, {this.props.lastName} </button>
-                </div>
-            </div>
-        );
-
-    }
+        <div>
+            <h1>{ props.lastName }, { props.firstName }</h1>
+            <p>Age: { props.age }</p>
+            <p>Hair Color: { props.hairColor }</p>
+        </div>
+    );
 }
 export default PersoneCard;
+// class PersoneCard extends Component {
+//     constructor(props){
+//         super(props);
+
+//         this.state ={
+//             age: this.props.age
+//         };
+//     }
+//     changeAge =() =>{
+//         this.setState({age:this.state.age +1});
+//     };
+// render(){
+//     return(
+//          <div class="countenar">
+//                 <div class="thediv">
+//                    <h1>{this.props.lastName}, {this.props.firstName}</h1>
+//                     <p>Age: {this.state.age}</p>
+//                     <p>Hair Color: {this.props.hairColor}</p>
+//                     <button class="button" onClick={this.changeAge}> Birthday Button For {this.props.firstName}, {this.props.lastName} </button>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
