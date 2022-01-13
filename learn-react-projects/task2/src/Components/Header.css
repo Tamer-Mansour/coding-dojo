@@ -1,0 +1,9 @@
+.head{
+    width: 1505px;
+    height: 90px;
+    top: 0;
+    border: 2px solid black;
+    background-color: #6aa84f;
+    position: absolute;
+    margin-left: 10px;
+}

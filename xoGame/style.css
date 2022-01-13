@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(191, 255, 252);
+}
+.Game{
+    width:425px;
+    text-align: center;
+    font-family: system-ui;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    font-weight: 500;
+}
+.title{
+    background:rgb(226, 164, 255);
+    padding: 5px 0;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 1px solid rgb(124, 90, 139);
+}
+span{
+    color: rgb(212, 0, 255);
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(124, 169, 236);
+    float: left;
+    margin: 2px;
+    font-size: 50px;
+    border: 1px solid rgb(71, 98, 138);
+    border-radius: 10px;
+}
+.square:hover{
+    background: rgb(187, 209, 241);
+    cursor: pointer;
+}
