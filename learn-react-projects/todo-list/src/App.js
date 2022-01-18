@@ -21,16 +21,17 @@ function App() {
   const handleTodoDelete = (e) => {
     setTodos(todos.filter((item, index) => index !== parseInt(e.target.id)));
   };
-  const handleToggleComplete = (idx) => {
-    const updatedTodos = todos.map((todo, i) => {
-      if (idx === i) {
-        todo.complete = !todo.complete;
-        const updatedTodo = { ...todo, complete: !todo.complete };
-        return updatedTodo;
-      }
-      return todo;
-    });
+
+  const checkboxHandler = (e) => {
+    setTodos(
+      todos.map((item, index) =>
+        index === parseInt(e.target.id)
+          ? { text: item.text, complete: e.target.checked } //if task:item -> e.target check
+          : { text: item.text, complete: item.complete }
+      )
+    ); //else keep it as it is (show item and status box uunchecked)
   };
+
   return (
     <div style={{ textAlign: "center" }}>
       <form
@@ -51,16 +52,21 @@ function App() {
       </form>
       <hr />
       {todos.map((todo, i) => {
+        const todoClasses = ["bold", "italics"];
+        if (todo.complete) {
+          todoClasses.push("line-through");
+        }
+
         return (
           <div key={i}>
             <input
-              onChange={(event) => {
-                handleToggleComplete(i);
-              }}
+              onChange={checkboxHandler}
               checked={todo.complete}
               type="checkbox"
+              id={i}
             />
-            <span>{todo.text} </span>
+            <span className={todoClasses.join(" ")}>{todo.text} </span>
+            {todos.complete ? <span className={"style"}>{todos.text}</span> : <span>{ todos.text }</span> }
             <button
               onClick={handleTodoDelete}
               id={i}
