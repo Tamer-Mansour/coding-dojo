@@ -11,7 +11,7 @@ export const PokemonAPI = () => {
 
   return (
     <div>
-      <button onClick={getPokemonByClickButton}>GET POKEMON</button>
+      <button onClick={getPokemonByClickButton}>AXION POKEMON</button>
       {name.length > 0 &&
         name.map((names, index) => {
           return <li key={index}>{names.name}</li>;
