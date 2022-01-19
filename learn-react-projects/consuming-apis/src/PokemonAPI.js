@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 export const PokemonAPI = () => {
   const [name, setName] = useState([]);
   const getPokemonByClickButton = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon")
-      .then((response) => response.json())
-      .then((response) => setName(response.results));
+    axios
+      .get("https://pokeapi.co/api/v2/pokemon?limit=807")
+      .then(response => setName(response.data.results));
   };
 
   return (
@@ -19,3 +20,4 @@ export const PokemonAPI = () => {
   );
 };
 export default PokemonAPI;
+//https://pokeapi.co/api/v2/pokemon?limit=807
