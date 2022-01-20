@@ -9,9 +9,8 @@ import People from "./Components/People";
 function App() {
   const [postJSON, setPostJSON] = useState("");
   const handleClick = (choice, id) => {
-    console.log("-----",choice, id);
-    axios.get(`https://swapi.dev/api/${choice}/${id}`)
-    .then(response => {
+    console.log("-----", choice, id);
+    axios.get(`https://swapi.dev/api/${choice}/${id}`).then((response) => {
       setPostJSON(response.data);
       console.log(response.data);
       navigate(`/${choice}/${id}`);
@@ -30,17 +29,15 @@ function App() {
   );
 }
 
-
-
 const Planets = ({ postJSON }) => {
   return (
     <div>
       <ul>
-      <h1>The planet name is : {postJSON.name}</h1>
-      <li>Climate: {postJSON.climate} </li>
-      <li>Terrain: {postJSON.terrain}</li>
-      <li>Surface Water: {postJSON.surface_water}</li>
-      <li>Population: {postJSON.population}</li>
+        <h1>The planet name is : {postJSON.name}</h1>
+        <li>Climate: {postJSON.climate} </li>
+        <li>Terrain: {postJSON.terrain}</li>
+        <li>Surface Water: {postJSON.surface_water}</li>
+        <li>Population: {postJSON.population}</li>
       </ul>
     </div>
   );

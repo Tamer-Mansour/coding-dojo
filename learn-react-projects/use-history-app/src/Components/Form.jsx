@@ -20,7 +20,6 @@ const Form = ({ handleClick }) => {
           <option>planets</option>
           <option>people</option>
         </select>
-
         <label>ID: </label>
         <input name="id" type="number" value={id} onChange={handleNumber} />
         {/* <button
@@ -28,8 +27,7 @@ const Form = ({ handleClick }) => {
             console.log("------ on click: ",choice, id);
             handleClick(choice, id);
           }
-          }
-          
+          }  
         >Search</button> */}
         <input type="submit" />
       </form>
