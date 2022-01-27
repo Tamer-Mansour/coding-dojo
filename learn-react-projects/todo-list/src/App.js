@@ -26,10 +26,10 @@ function App() {
     setTodos(
       todos.map((item, index) =>
         index === parseInt(e.target.id)
-          ? { text: item.text, complete: e.target.checked } //if task:item -> e.target check
+          ? { text: item.text, complete: e.target.checked }
           : { text: item.text, complete: item.complete }
       )
-    ); //else keep it as it is (show item and status box uunchecked)
+    ); 
   };
 
   return (
@@ -65,7 +65,7 @@ function App() {
               type="checkbox"
               id={i}
             />
-            <span className={todoClasses.join(" ")}>{todo.text} </span>
+            <h1 className={todoClasses.join(" ")}>{todo.text} </h1>
             {todos.complete ? <span className={"style"}>{todos.text}</span> : <span>{ todos.text }</span> }
             <button
               onClick={handleTodoDelete}
