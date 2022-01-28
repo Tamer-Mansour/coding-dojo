@@ -26,8 +26,8 @@ function fiveHeadsSync() {
     }
     return `It took ${attempts} tries to flip five "heads"`;
 }
-console.log(fiveHeadsSync());
-console.log("This is run after the fiveHeadsSync function completes");
+// console.log(fiveHeadsSync());
+// console.log("This is run after the fiveHeadsSync function completes");
 
 function fiveHeads() {
     return new Promise((resolve, reject) => {
@@ -56,9 +56,9 @@ function fiveHeads() {
         }
     });
 }
-fiveHeads()
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
-console.log("When does this run now?");
+// fiveHeads()
+//     .then((res) => console.log(res))
+//     .catch((err) => console.log(err));
+// console.log("When does this run now?");
 
 export default CoinFlipper;

@@ -1,0 +1,22 @@
+.countenar{
+    text-align: center;
+    padding-left: 30%;
+}
+button {
+    color: black;
+    border: 2px solid #009b00;
+    width: 250px;
+    height:50px ;
+    background-color: #1ac91a;
+    
+}
+button:hover{
+    background-color: #1ac91a5e;
+
+}
+.thediv{
+    border: 2px solid black;
+    width: 600px;
+    height: 300px;
+    border-collapse: collapse;
+}

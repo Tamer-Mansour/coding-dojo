@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Task from "../Images/Task.png";
-import "./Cards.css"
+import coin from "../Images/coin.jpg";
+import login from "../Images/login.png";
+import "./Cards.css";
 export const Cards = () => {
   return (
     <div>
@@ -14,7 +16,7 @@ export const Cards = () => {
             I made this task when i learn react coding dojo.
           </p>
           <button className="btn btn-primary">
-            <Link to="/todo" style={{ color: "white" }}>
+            <Link to="/todo"  style={{ color: "white" }}>
               Go to task
             </Link>
           </button>
@@ -22,7 +24,7 @@ export const Cards = () => {
       </div>
       {/* second card */}
       <div className="card sort" style={{ width: "18rem" }}>
-        <img className="card-img-top" src={Task} alt="task" />
+        <img className="card-img-top" src={coin} alt="task" />
         <div className="card-body">
           <h5 className="card-title">Coin Flipper</h5>
           <p className="card-text">
@@ -35,8 +37,37 @@ export const Cards = () => {
           </button>
         </div>
       </div>
-      <p>  
-      </p>
+      {/* third card */}
+      <div className="card sort" style={{ width: "18rem" }}>
+        <img className="card-img-top" src={Task} alt="task" />
+        <div className="card-body">
+          <h5 className="card-title">Prop It Up</h5>
+          <p className="card-text">
+            I made this task when i learn react coding dojo.
+          </p>
+          <button className="btn btn-primary">
+            <Link to="/prop" style={{ color: "white" }}>
+              Go to task
+            </Link>
+          </button>
+        </div>
+      </div>
+      {/* forth card */}
+      <div className="card sort" style={{ width: "18rem" }}>
+        <img className="card-img-top" src={login} alt="task" />
+        <div className="card-body">
+          <h5 className="card-title">Form Login</h5>
+          <p className="card-text">
+            I made this task when i learn react coding dojo.
+          </p>
+          <button className="btn btn-primary">
+            <Link to="/login" style={{ color: "white" }}>
+              Go to task
+            </Link>
+          </button>
+        </div>
+      </div>
+      <p></p>
     </div>
   );
 };
