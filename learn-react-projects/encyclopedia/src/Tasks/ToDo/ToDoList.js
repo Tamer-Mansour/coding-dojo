@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './ToDoList.css'
+import "./ToDoList.css";
 
 function ToDoList() {
   const [newTodo, setNewTodo] = useState("");
@@ -29,7 +29,7 @@ function ToDoList() {
           ? { text: item.text, complete: e.target.checked }
           : { text: item.text, complete: item.complete }
       )
-    ); 
+    );
   };
 
   return (
@@ -66,7 +66,11 @@ function ToDoList() {
               id={i}
             />
             <h1 className={todoClasses.join(" ")}>{todo.text} </h1>
-            {todos.complete ? <span className={"style"}>{todos.text}</span> : <span>{ todos.text }</span> }
+            {todos.complete ? (
+              <span className={"style"}>{todos.text}</span>
+            ) : (
+              <span>{todos.text}</span>
+            )}
             <button
               onClick={handleTodoDelete}
               id={i}
