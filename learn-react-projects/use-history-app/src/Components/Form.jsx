@@ -14,23 +14,22 @@ const Form = ({ handleClick }) => {
 
   return (
     <div>
-      <form onSubmit={handleClick(choice, id)}>
-        <label>Search for: </label>
-        <select name="select" onChange={handleSelect}>
-          <option>planets</option>
-          <option>people</option>
-        </select>
-        <label>ID: </label>
-        <input name="id" type="number" value={id} onChange={handleNumber} />
-        <button
-          onClick={()=> {
-            console.log("------ on click: ",choice, id);
-            handleClick(choice, id);
-          }
-          }  
-        >Search</button>
-        {/* <input type="submit" /> */}
-      </form>
+      <label>Search for: </label>
+      <select name="select" onChange={handleSelect}>
+        <option value={null}>select</option>
+        <option value="planets">Planets</option>
+        <option value="people">People(human)</option>
+      </select>
+      <label>ID: </label>
+      <input name="id" type="number" value={id} onChange={handleNumber} />
+      <button
+        onClick={() => {
+          console.log("------ on click: ", choice, id);
+          handleClick(choice, id);
+        }}
+      >
+        Search
+      </button>
     </div>
   );
 };
