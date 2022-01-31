@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Home path="/" />
-      <Form path="/home" handleClick={handleClick} />
+        <Home path="/" />
+        <Form path="/home" handleClick={handleClick} />
         <People path="/home/people/:number" postJSON={postJSON} />
         <Planets path="/home/planets/:number" postJSON={postJSON} />
       </Router>
