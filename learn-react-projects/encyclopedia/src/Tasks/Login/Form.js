@@ -27,7 +27,6 @@ const Form = () => {
       placeholder: "Last Name",
       errorMessage: "your last name requierd",
       label: "Last Name",
-
       required: true,
     },
 
