@@ -15,7 +15,7 @@ const Footer = () => {
               tutorial.
             </p>
           </div>
-          <hr class="clearfix w-100 d-md-none pb-0.5" />
+          <hr className="clearfix w-100 d-md-none pb-0.5" />
           <div className="col-md-6 mb-md-0 mb-3">
             <h5 className="text-uppercase" style={{ color: "white" }}>
               Links

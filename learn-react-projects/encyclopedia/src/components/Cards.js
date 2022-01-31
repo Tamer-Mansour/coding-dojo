@@ -15,11 +15,10 @@ export const Cards = () => {
           <p className="card-text">
             I made this task when i learn react coding dojo.
           </p>
-          <button className="btn btn-primary">
-            <Link to="/todo"  style={{ color: "white" }}>
-              Go to task
-            </Link>
-          </button>
+          <Link to="/todo" style={{ color: "white" }}>
+            {" "}
+            <button className="btn btn-primary">Go to task</button>
+          </Link>
         </div>
       </div>
       {/* second card */}
@@ -30,11 +29,10 @@ export const Cards = () => {
           <p className="card-text">
             I made this task when i learn react coding dojo.
           </p>
-          <button className="btn btn-primary">
-            <Link to="/coin" style={{ color: "white" }}>
-              Go to task
-            </Link>
-          </button>
+          <Link to="/coin" style={{ color: "white" }}>
+            {" "}
+            <button className="btn btn-primary">Go to task</button>
+          </Link>
         </div>
       </div>
       {/* third card */}
@@ -45,11 +43,10 @@ export const Cards = () => {
           <p className="card-text">
             I made this task when i learn react coding dojo.
           </p>
-          <button className="btn btn-primary">
-            <Link to="/prop" style={{ color: "white" }}>
-              Go to task
-            </Link>
-          </button>
+          <Link to="/prop" style={{ color: "white" }}>
+            {" "}
+            <button className="btn btn-primary">Go to task</button>
+          </Link>
         </div>
       </div>
       {/* forth card */}
@@ -60,11 +57,10 @@ export const Cards = () => {
           <p className="card-text">
             I made this task when i learn react coding dojo.
           </p>
-          <button className="btn btn-primary">
-            <Link to="/login" style={{ color: "white" }}>
-              Go to task
-            </Link>
-          </button>
+          <Link to="/login" style={{ color: "white" }}>
+            {" "}
+            <button className="btn btn-primary">Go to task</button>
+          </Link>
         </div>
       </div>
       <p></p>

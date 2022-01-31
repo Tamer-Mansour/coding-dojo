@@ -3,7 +3,12 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "../Home";
 import { About } from "../About";
 import { ContactUs } from "../ContactUs";
-import "./NavBar.css"
+
+import "./NavBar.css";
+import ToDoList from "../../Tasks/ToDo/ToDoList";
+import CoinFlipper from "../../Tasks/CoinFlipper/CoinFlipper";
+import CountingIt from "../../Tasks/FirstApp/CountingIt";
+import Form from "../../Tasks/Login/Assignment/Form";
 
 const NavBar = () => {
   return (
@@ -35,6 +40,10 @@ const NavBar = () => {
         <Route exact path="/contact">
           <ContactUs />
         </Route>
+        <Route exact path="/todo" component={ToDoList} />
+        <Route exact path="/coin" component={CoinFlipper} />
+        <Route exact path="/prop" component={CountingIt} />
+        <Route exact path="/login" component={Form} />
       </Switch>
     </BrowserRouter>
   );
