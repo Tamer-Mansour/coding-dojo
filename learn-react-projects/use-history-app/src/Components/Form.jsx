@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./style.css";
 
 const Form = ({ handleClick }) => {
   const [choice, setChoice] = useState("");
@@ -20,12 +21,15 @@ const Form = ({ handleClick }) => {
           handleClick(choice, id);
         }}
       >
-        <label>Search for: </label>
-        <select name="select" onChange={handleSelect} required>
+        <label for="standard-select">Search for: </label>
+        <div class="select">
+        <select name="select"  id="standard-select" onChange={handleSelect} required>
           <option value="">select</option>
           <option value="planets">Planets</option>
           <option value="people">People(human)</option>
         </select>
+        </div>
+        <p></p>
         <label>ID: </label>
         <input
           name="id"
