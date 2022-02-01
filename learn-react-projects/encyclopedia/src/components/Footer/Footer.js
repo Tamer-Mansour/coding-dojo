@@ -46,7 +46,7 @@ const Footer = () => {
         className="footer-copyright text-center py-3 copy"
       >
         © 2022 Copyright:
-        <a href="#!" style={{ color: "white" }}>
+        <a href="/about" style={{ color: "white" }}>
           {" "}
           Tamer Company
         </a>
