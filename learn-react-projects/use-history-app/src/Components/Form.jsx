@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Form = ({ handleClick }) => {
   const [choice, setChoice] = useState("");
-  const [id, setId] = useState();
+  const [id, setId] = useState(0);
 
   const handleSelect = (e) => {
     setChoice(e.target.value);
@@ -14,22 +14,32 @@ const Form = ({ handleClick }) => {
 
   return (
     <div>
-      <form onSubmit={handleClick(choice, id)}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleClick(choice, id);
+        }}
+      >
         <label>Search for: </label>
-        <select name="select" onChange={handleSelect}>
-          <option>planets</option>
-          <option>people</option>
+        <select name="select" onChange={handleSelect} required>
+          <option value="">select</option>
+          <option value="planets">Planets</option>
+          <option value="people">People(human)</option>
         </select>
         <label>ID: </label>
-        <input name="id" type="number" value={id} onChange={handleNumber} />
-        <button
-          onClick={()=> {
-            console.log("------ on click: ",choice, id);
-            handleClick(choice, id);
-          }
-          }  
-        >Search</button>
-        {/* <input type="submit" /> */}
+        <input
+          name="id"
+          type="number"
+          value={id}
+          onChange={handleNumber}
+          required
+        />
+        <input
+          type="submit"
+          onClick={() => {
+            console.log("------ on click: ", choice, id);
+          }}
+        />
       </form>
     </div>
   );
