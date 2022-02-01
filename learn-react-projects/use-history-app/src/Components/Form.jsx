@@ -34,19 +34,10 @@ const Form = ({ handleClick }) => {
           onChange={handleNumber}
           required
         />
-        {/* <button
-        onClick={() => {
-          console.log("------ on click: ", choice, id);
-          handleClick(choice, id);
-        }}
-      >
-        Search
-      </button> */}
         <input
           type="submit"
           onClick={() => {
             console.log("------ on click: ", choice, id);
-            // handleClick(choice, id);
           }}
         />
       </form>
