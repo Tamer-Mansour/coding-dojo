@@ -9,6 +9,7 @@ import ToDoList from "../../Tasks/ToDo/ToDoList";
 import CoinFlipper from "../../Tasks/CoinFlipper/CoinFlipper";
 import CountingIt from "../../Tasks/FirstApp/CountingIt";
 import Form from "../../Tasks/Login/Form";
+import { ErrorPage } from "../ErrorPage";
 
 const NavBar = () => {
   return (
@@ -44,6 +45,7 @@ const NavBar = () => {
         <Route exact path="/coin" component={CoinFlipper} />
         <Route exact path="/prop" component={CountingIt} />
         <Route exact path="/login" component={Form} />
+        <Route exact path="*" component={ErrorPage} />
       </Switch>
     </BrowserRouter>
   );
