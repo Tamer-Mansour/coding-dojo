@@ -6,20 +6,6 @@ import { Router } from "@reach/router";
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter>
-        <Switch>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/:wordOrNum">
-            <Home wordOrNum="4" />
-            <Home wordOrNum="hello" />
-          </Route>
-          <Route exact path="/:wordOrNum/:color/:backgroundColor">
-            <Home wordOrNum="hello" color="blue" backgroundColor="red" />
-          </Route>
-        </Switch>
-      </BrowserRouter> */}
       <Router>
         <Home path="/home" />
         <Home path="/:wordOrNum" />
@@ -28,21 +14,28 @@ function App() {
 
       <div>
         <p>
-          type in url <code>http://localhost:3000/home</code> to rout in the
-          home page
+          type in url{" "}
+          <code style={{ color: "red" }}>http://localhost:3000/home</code> to
+          rout in the home page
         </p>
         <p>
-          type in url <code>http://localhost:3000/4</code> to rout in the number
-          page
+          type in url{" "}
+          <code style={{ color: "red" }}>http://localhost:3000/4</code> to rout
+          in the number page
         </p>
         <p>
-          type in url <code>http://localhost:3000/hello</code> to rout to output
+          type in url{" "}
+          <code style={{ color: "red" }}>http://localhost:3000/hello</code> to
+          rout to output
           <code>Your input word is ^your world^ :</code>
         </p>
         <p>
-          type in url <code>http://localhost:3000/hello/blue/red</code> to rout
-          to output
-          <code>
+          type in url{" "}
+          <code style={{ color: "red" }}>
+            http://localhost:3000/hello/blue/red
+          </code>{" "}
+          to rout to output
+          <code style={{ color: "red" }}>
             Your input word is ^your world^ with blue color and red background :
           </code>
         </p>
