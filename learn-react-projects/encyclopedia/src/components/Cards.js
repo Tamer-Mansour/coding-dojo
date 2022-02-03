@@ -6,7 +6,7 @@ import login from "../Images/login.png";
 import "./Cards.css";
 export const Cards = () => {
   return (
-    <div>
+    <div className="comm">
       {/* first card */}
       <div className="card sort" style={{ width: "18rem" }}>
         <img className="card-img-top" src={Task} alt="task" />

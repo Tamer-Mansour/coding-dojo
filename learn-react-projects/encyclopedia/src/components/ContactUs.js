@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export const ContactUs = () => {
   return (
@@ -84,8 +85,9 @@ export const ContactUs = () => {
             </form>
 
             <div class="text-center text-md-left">
-              <a className="btn btn-primary">Send</a>
+              <Link to="/"><button>Sent</button></Link>
             </div>
+            
             <div className="status"></div>
           </div>
 

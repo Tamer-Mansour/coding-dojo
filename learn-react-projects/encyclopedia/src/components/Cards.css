@@ -1,8 +1,10 @@
 .sort {
     display: inline-block;
     display:0 flex;
-    margin-left: 20px;
 }
 a{
     text-decoration: none;
+}
+.comm{
+    text-align: center;
 }
