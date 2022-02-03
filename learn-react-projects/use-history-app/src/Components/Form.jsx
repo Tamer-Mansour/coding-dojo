@@ -23,11 +23,16 @@ const Form = ({ handleClick }) => {
       >
         <label for="standard-select">Search for: </label>
         <div class="select">
-        <select name="select"  id="standard-select" onChange={handleSelect} required>
-          <option value="">select</option>
-          <option value="planets">Planets</option>
-          <option value="people">People(human)</option>
-        </select>
+          <select
+            name="select"
+            id="standard-select"
+            onChange={handleSelect}
+            required
+          >
+            <option value="">select</option>
+            <option value="planets">Planets</option>
+            <option value="people">People(human)</option>
+          </select>
         </div>
         <p></p>
         <label>ID: </label>
@@ -37,6 +42,8 @@ const Form = ({ handleClick }) => {
           value={id}
           onChange={handleNumber}
           required
+          min="1"
+          max="83"
         />
         <input
           type="submit"
