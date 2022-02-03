@@ -85,8 +85,9 @@ export const ContactUs = () => {
             </form>
 
             <div class="text-center text-md-left">
-              <Link className="btn btn-primary" to="/">Send</Link>
+              <Link to="/"><button>Sent</button></Link>
             </div>
+            
             <div className="status"></div>
           </div>
 
