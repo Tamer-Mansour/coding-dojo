@@ -10,8 +10,9 @@ import CoinFlipper from "../../Tasks/CoinFlipper/CoinFlipper";
 import CountingIt from "../../Tasks/FirstApp/CountingIt";
 import Form from "../../Tasks/Login/Form";
 import { ErrorPage } from "../ErrorPage";
+import DisplayAll from "./Rating/DisplayAll";
 
-const NavBar = () => {
+const NavBar = ({ currentRate }) => {
   return (
     <BrowserRouter>
       <ul className="nav">
@@ -30,6 +31,11 @@ const NavBar = () => {
             Contact
           </Link>
         </li>
+        <li className="list">
+          <Link to="/rate" style={{ color: "white" }}>
+            Rate
+          </Link>
+        </li>
       </ul>
       <Switch>
         <Route path="/about">
@@ -40,6 +46,9 @@ const NavBar = () => {
         </Route>
         <Route exact path="/contact">
           <ContactUs />
+        </Route>
+        <Route exact path="/rate">
+          <DisplayAll />
         </Route>
         <Route exact path="/todo" component={ToDoList} />
         <Route exact path="/coin" component={CoinFlipper} />

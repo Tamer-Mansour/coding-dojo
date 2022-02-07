@@ -47,7 +47,12 @@ function ToDoList() {
           value={newTodo}
         />
         <div>
-          <button>Add</button>
+          <button
+            className="btn btn-primary"
+            style={{ marginLeft: "10px", width: "150px" }}
+          >
+            Add
+          </button>
         </div>
       </form>
       <hr />
@@ -72,9 +77,10 @@ function ToDoList() {
               <span>{todos.text}</span>
             )}
             <button
+              className="btn btn-primary"
               onClick={handleTodoDelete}
               id={i}
-              style={{ marginLeft: "10px" }}
+              style={{ marginLeft: "10px", width: "150px" }}
             >
               DELETE
             </button>

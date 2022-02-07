@@ -7,15 +7,15 @@ function tossCoin() {
 function CoinFlipper() {
   return (
     <div className="d">
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <h1>Welcome to the task</h1>
       <h1>this task is in the console </h1>
       <br />
@@ -71,10 +71,17 @@ function fiveHeads() {
     }
   });
 }
-fiveHeads()
-  .then((res) => console.log(res))
+
+async function Msg() {
+  const Msg = await fiveHeads();
+  console.log(".................... msg is _-_-_" + Msg);
+}
+Msg()
+  .then((res) => Msg())
+  .then(res => (res.ok ? res : Promise.reject(res)))
   .catch((err) => console.log(err));
-// let t = res+"hello";
+
+console.log(`-------------This is the resolve`);
 console.log("When does this run now?");
 
 export default CoinFlipper;

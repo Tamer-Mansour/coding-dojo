@@ -1,0 +1,12 @@
+import React from "react";
+
+const MessageDisplay = (props) => {
+  return (
+    <>
+      <h1>Current Message</h1>
+      <pre>{props.message1}</pre>
+    </>
+  );
+};
+
+export default MessageDisplay;
