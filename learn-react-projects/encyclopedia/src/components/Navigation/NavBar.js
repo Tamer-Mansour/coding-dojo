@@ -11,7 +11,6 @@ import CountingIt from "../../Tasks/FirstApp/CountingIt";
 import Form from "../../Tasks/Login/Form";
 import { ErrorPage } from "../ErrorPage";
 import DisplayAll from "./Rating/DisplayAll";
-import DisplayRate from "./Rating/DisplayRate";
 
 const NavBar = ({ currentRate }) => {
   return (
