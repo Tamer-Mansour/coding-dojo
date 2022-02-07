@@ -5,8 +5,9 @@ const colors = {
   gold: "#FFD700",
   grey: "#a9a9a9",
 };
-function Stars() {
+function Stars(props) {
   const [currentValue, setCurrentValue] = useState(0);
+  console.log(currentValue)
   const [hoverValue, setHoverValue] = useState(undefined);
   const stars = Array(5).fill(0);
 
@@ -26,6 +27,7 @@ function Stars() {
     <div style={styles.stars}>
       {stars.map((_, index) => {
         return (
+          <>
           <FaStar
             key={index}
             size={24}
@@ -40,6 +42,7 @@ function Stars() {
               cursor: "pointer",
             }}
           />
+          </>
         );
       })}
     </div>

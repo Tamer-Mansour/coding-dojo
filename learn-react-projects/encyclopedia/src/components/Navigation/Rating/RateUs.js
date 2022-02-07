@@ -1,13 +1,16 @@
 import React from "react";
-import Stars from "./Stars";
+// import Stars from "./Stars";
+import StarsRating from "./StarsRating";
 
 function RateUs() {
+// console.log("2222222222222222222222222222"+currentValue)
   return (
     <div style={styles.container}>
-      <h2> React Ratings </h2>
-      <Stars />
+      <h2> Ratings </h2>
+      <StarsRating />
       <textarea placeholder="What's your experience?" style={styles.textarea} />
       <button style={styles.button}>Submit</button>
+      {/* <h3>Your submit rate is:{currentValue} </h3> */}
     </div>
   );
 }

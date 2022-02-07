@@ -11,7 +11,6 @@ import CountingIt from "../../Tasks/FirstApp/CountingIt";
 import Form from "../../Tasks/Login/Form";
 import { ErrorPage } from "../ErrorPage";
 import RateUs from "./Rating/RateUs";
-import Stars from "./Rating/Stars";
 
 const NavBar = () => {
   return (
@@ -37,9 +36,11 @@ const NavBar = () => {
             Rate
           </Link>
         </li>
-        <div className="stars">
-          <Stars />
-        </div>
+        <li className="list">
+          <Link to="/rate" style={{ color: "white" }}>
+            {/* Rate is : " <p>{selectedStars} of{totalStars}</p> " */}
+          </Link>
+        </li>
       </ul>
       <Switch>
         <Route path="/about">
