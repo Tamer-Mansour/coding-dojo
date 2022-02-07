@@ -10,7 +10,7 @@ import CoinFlipper from "../../Tasks/CoinFlipper/CoinFlipper";
 import CountingIt from "../../Tasks/FirstApp/CountingIt";
 import Form from "../../Tasks/Login/Form";
 import { ErrorPage } from "../ErrorPage";
-import RateUs from "./Rating/RateUs";
+import DisplayAll from "./Rating/DisplayAll";
 
 const NavBar = () => {
   return (
@@ -36,11 +36,7 @@ const NavBar = () => {
             Rate
           </Link>
         </li>
-        <li className="list">
-          <Link to="/rate" style={{ color: "white" }}>
-            {/* Rate is : " <p>{selectedStars} of{totalStars}</p> " */}
-          </Link>
-        </li>
+        
       </ul>
       <Switch>
         <Route path="/about">
@@ -53,7 +49,7 @@ const NavBar = () => {
           <ContactUs />
         </Route>
         <Route exact path="/rate">
-          <RateUs />
+          <DisplayAll />
         </Route>
         <Route exact path="/todo" component={ToDoList} />
         <Route exact path="/coin" component={CoinFlipper} />

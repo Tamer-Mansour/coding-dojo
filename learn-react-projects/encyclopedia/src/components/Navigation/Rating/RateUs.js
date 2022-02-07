@@ -1,17 +1,38 @@
-import React from "react";
-// import Stars from "./Stars";
+import React, { useState } from "react";
 import StarsRating from "./StarsRating";
 
-function RateUs() {
-// console.log("2222222222222222222222222222"+currentValue)
+function RateUs({totalStars, onNewMessage}) {
+  const [rate, setRate] = useState("");
+  const [selectedStars, setSelectedStars] = useState(0);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onNewMessage(rate);
+  };
+
   return (
-    <div style={styles.container}>
-      <h2> Ratings </h2>
-      <StarsRating />
-      <textarea placeholder="What's your experience?" style={styles.textarea} />
-      <button style={styles.button}>Submit</button>
-      {/* <h3>Your submit rate is:{currentValue} </h3> */}
-    </div>
+    <>
+      <form onSubmit={handleSubmit} style={styles.container}>
+        <h2> Ratings </h2>
+        <StarsRating
+        totalStars={totalStars}
+          onSelect={setSelectedStars}
+          selectedStars={selectedStars}
+        />
+        <p>
+          {selectedStars} of {totalStars}
+        </p>
+        <textarea
+          placeholder="What's your experience?"
+          style={styles.textarea}
+          onChange={(e) => {
+            setRate(e.target.value);
+          }}
+          value={rate}
+        />
+        <input className="btn btn-primary" type="submit" value="Send Rate" />
+      </form>
+    </>
   );
 }
 const styles = {
