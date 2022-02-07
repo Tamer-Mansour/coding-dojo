@@ -3,17 +3,15 @@ import DisplayRate from "./DisplayRate";
 import RateUs from "./RateUs";
 
 function DisplayAll({totalStars,selectedStars}) {
-  const [currentRate, setCurrentRate] = useState("There are no messages");
+  const [currentRate, setCurrentRate] = useState("There are no messages or rate");
 
   const YourGutTate = (newMessage) => {
     setCurrentRate(newMessage);
   };
   return (
     <>
-      <RateUs totalStars={5} onNewMessage={YourGutTate} />
-      <p>
-        {selectedStars} of {totalStars}
-      </p>
+      <RateUs totalStars={10} onNewMessage={YourGutTate} />
+
       <DisplayRate message={currentRate} />
     </>
   );

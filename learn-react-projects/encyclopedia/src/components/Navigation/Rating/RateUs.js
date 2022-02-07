@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import StarsRating from "./StarsRating";
 
-function RateUs({totalStars, onNewMessage}) {
+function RateUs({ totalStars, onNewMessage }) {
   const [rate, setRate] = useState("");
   const [selectedStars, setSelectedStars] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onNewMessage(rate);
+    onNewMessage(rate + " ( " + selectedStars + " of " + totalStars + " ) ");
   };
 
   return (
@@ -15,7 +15,7 @@ function RateUs({totalStars, onNewMessage}) {
       <form onSubmit={handleSubmit} style={styles.container}>
         <h2> Ratings </h2>
         <StarsRating
-        totalStars={totalStars}
+          totalStars={totalStars}
           onSelect={setSelectedStars}
           selectedStars={selectedStars}
         />

@@ -37,6 +37,11 @@ const Footer = () => {
                   Contact
                 </a>
               </li>
+              <li>
+                <a href="/rate" style={{ color: "white" }}>
+                  Rate us
+                </a>
+              </li>
             </ul>
           </div>
         </div>

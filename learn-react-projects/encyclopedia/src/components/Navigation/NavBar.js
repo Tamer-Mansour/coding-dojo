@@ -11,8 +11,9 @@ import CountingIt from "../../Tasks/FirstApp/CountingIt";
 import Form from "../../Tasks/Login/Form";
 import { ErrorPage } from "../ErrorPage";
 import DisplayAll from "./Rating/DisplayAll";
+import DisplayRate from "./Rating/DisplayRate";
 
-const NavBar = () => {
+const NavBar = ({ currentRate }) => {
   return (
     <BrowserRouter>
       <ul className="nav">
@@ -36,7 +37,6 @@ const NavBar = () => {
             Rate
           </Link>
         </li>
-        
       </ul>
       <Switch>
         <Route path="/about">
