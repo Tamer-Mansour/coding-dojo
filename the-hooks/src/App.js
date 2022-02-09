@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DataFetching from "./components/Hooks/DataFetching";
 
-function App() {
+function App({ login }) {
+  const { loading, data, error } = DataFetching(
+    `https://api.github.com/users/${login}`
+  );
+  if (loading) return <h1>loading..............</h1>;
+  if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <pre>{JSON.stringify(error, null, 2)}</pre>
     </div>
   );
 }
