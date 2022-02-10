@@ -63,6 +63,20 @@ export const Cards = () => {
           </Link>
         </div>
       </div>
+      {/* 6 card */}
+      <div className="card sort" style={{ width: "18rem" }}>
+        <img className="card-img-top" src={login} alt="task" />
+        <div className="card-body">
+          <h5 className="card-title">Add your images</h5>
+          <p className="card-text">
+            I made this task when i learn react coding dojo.
+          </p>
+          <Link to="/upload" style={{ color: "white" }}>
+            {" "}
+            <button className="btn btn-primary">Go to upload </button>
+          </Link>
+        </div>
+      </div>
       <p></p>
     </div>
   );
