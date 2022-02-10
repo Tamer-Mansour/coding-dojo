@@ -37,9 +37,14 @@
   margin: 0;
   list-style: none;
 }
+.rightbarFriend{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
 .rightbarProfileImgContainer {
-  margin-right: 10px;
+  margin-right: 0;
   position: relative;
   display: flex;
 }
