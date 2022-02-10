@@ -38,7 +38,7 @@ function fiveHeadsSync() {
   while (headsCount < 5) {
     attempts++;
     let result = tossCoin();
-    console.log(`${result} was flipped`);
+    // console.log(`${result} was flipped`);
     if (result === "heads") {
       headsCount++;
     } else {
@@ -47,8 +47,8 @@ function fiveHeadsSync() {
   }
   return `It took ${attempts} tries to flip five "heads"`;
 }
-console.log(fiveHeadsSync());
-console.log("This is run after the fiveHeadsSync function completes");
+// console.log(fiveHeadsSync());
+// console.log("This is run after the fiveHeadsSync function completes");
 
 function fiveHeads() {
   return new Promise((resolve, reject) => {
@@ -74,14 +74,14 @@ function fiveHeads() {
 
 async function Msg() {
   const Msg = await fiveHeads();
-  console.log(".................... msg is _-_-_" + Msg);
+  // console.log(".................... msg is _-_-_" + Msg);
 }
 Msg()
   .then((res) => Msg())
   .then(res => (res.ok ? res : Promise.reject(res)))
   .catch((err) => console.log(err));
 
-console.log(`-------------This is the resolve`);
-console.log("When does this run now?");
+// console.log(`-------------This is the resolve`);
+// console.log("When does this run now?");
 
 export default CoinFlipper;

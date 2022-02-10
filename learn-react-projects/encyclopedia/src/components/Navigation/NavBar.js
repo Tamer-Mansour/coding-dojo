@@ -11,6 +11,8 @@ import CountingIt from "../../Tasks/FirstApp/CountingIt";
 import Form from "../../Tasks/Login/Form";
 import { ErrorPage } from "../ErrorPage";
 import DisplayAll from "./Rating/DisplayAll";
+import Upload from "../../Tasks/Upload";
+
 
 const NavBar = ({ currentRate }) => {
   return (
@@ -54,6 +56,8 @@ const NavBar = ({ currentRate }) => {
         <Route exact path="/coin" component={CoinFlipper} />
         <Route exact path="/prop" component={CountingIt} />
         <Route exact path="/login" component={Form} />
+        <Route exact path="/upload" component={Upload} />
+
         <Route exact path="*" component={ErrorPage} />
       </Switch>
     </BrowserRouter>
