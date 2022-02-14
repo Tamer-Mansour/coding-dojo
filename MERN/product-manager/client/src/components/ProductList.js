@@ -5,7 +5,7 @@ import DeleteButton from "./DeleteButton";
 export default function ProductList(props) {
   const [productList, setProductList] = useState(props.products);
 
-  console.log(props.products);
+  console.log('/*/*/*/*/*/*/'+props.products);
   return (
     <div>
       <h1>All Products: </h1>
