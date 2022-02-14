@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import DeleteButton from "../components/DeleteButton";
 import ProductForm from "../components/ProductForm";
 
 import axios from "axios";
 import { useNavigate } from "@reach/router";
 
-export default (props) => {
+export default function Update (props){
   const navigate = useNavigate();
 
   const [product, setProduct] = useState();

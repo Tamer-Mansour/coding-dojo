@@ -6,7 +6,7 @@ import { navigate } from "@reach/router";
 import ProductForm from "../components/ProductForm";
 import ProductList from "../components/ProductList";
 
-export default (props) => {
+export default function Main (props){
   const [productList, setProductList] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [errors, setErrors] = useState({});

@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "@reach/router";
 
 import DeleteButton from "./DeleteButton";
-
-import axios from "axios";
-
-export default (props) => {
+export default function ProductList(props) {
   const [productList, setProductList] = useState(props.products);
 
   console.log(props.products);
@@ -17,7 +14,7 @@ export default (props) => {
         {productList.map((product, index) => (
           <div key={index} className="list-group-item">
             <Link to={`/product/${product._id}`}>{product.title}</Link>
-            <DeleteButton
+            <DeleteButton style={{paddingRight: 0}}
               productId={product._id}
               successCallback={() =>
                 setProductList(
@@ -30,4 +27,4 @@ export default (props) => {
       </ul>
     </div>
   );
-};
+}

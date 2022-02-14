@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default (props) => {
+export default function ProductForm(props) {
   const errors = props.err;
   const { initialTitle, initialPrice, initialDescription } = props;
 
@@ -10,9 +10,7 @@ export default (props) => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-
     props.onSubmitProp({ title, price, description });
-
     setTitle("");
     setPrice();
     setDescription("");
@@ -31,6 +29,7 @@ export default (props) => {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            placeholder="Product Name"
           />
         </div>
 
@@ -41,8 +40,9 @@ export default (props) => {
           ) : null}
           <input
             className="form-control form-control-sm"
-            type="text"
+            type="number"
             onChange={(e) => setPrice(parseFloat(e.target.value))}
+            placeholder="Price"
           />
         </div>
 
@@ -58,11 +58,11 @@ export default (props) => {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            placeholder="Description"
           />
         </div>
-
         <input className="btn btn-info btn-lg" type="submit" value="Create" />
       </form>
     </>
   );
-};
+}

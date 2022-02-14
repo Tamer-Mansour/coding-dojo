@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-export default (props) => {
+export default function DeleteButton(props) {
   const { productId, successCallback } = props;
 
   const deletePerson = (e) => {
@@ -16,4 +16,4 @@ export default (props) => {
       Delete
     </button>
   );
-};
+}

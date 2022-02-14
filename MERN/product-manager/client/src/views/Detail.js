@@ -5,7 +5,7 @@ import DeleteButton from "../components/DeleteButton";
 
 import axios from "axios";
 
-export default (props) => {
+export default function Detail(props) {
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
 
@@ -54,4 +54,4 @@ export default (props) => {
       </div>
     </div>
   );
-};
+}
