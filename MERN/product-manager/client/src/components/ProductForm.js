@@ -53,7 +53,7 @@ export default function ProductForm(props) {
               {errors.description.message}
             </span>
           ) : null}
-          <input
+          <textarea
             className="form-control form-control-sm"
             type="text"
             value={description}
